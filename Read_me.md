@@ -152,10 +152,10 @@
 - The app is designed to be intuitive, and comes with an user guide making it easy to use & is accessible for both customers and sales representatives.
   
 **HOME PAGE**
-![Alt Text](Streamlit/Images/Home_pg.jpg)
+![Home Page](Streamlit/Images/Home_pg.jpg)
 
 **PREDICTION PAGE**
-![Prediction Page](Streamlit\Images\Prediction_pg.jpg)
+![Prediction Page](Streamlit/Images/Prediction_pg.jpg)
 
 **RESULT PAGE**
-![Result Page](Streamlit\Images\Result_pg.jpg)
+![Result Page](Streamlit/Images/Result_pg.jpg)

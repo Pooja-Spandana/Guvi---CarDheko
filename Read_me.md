@@ -152,7 +152,7 @@
 - The app is designed to be intuitive, and comes with an user guide making it easy to use & is accessible for both customers and sales representatives.
   
 **HOME PAGE**
-![Home Page](Streamlit\Images\Home_pg.jpg)
+![Home Page](https://github.com/Pooja-Spandana/Guvi---CarDheko/blob/main/Read_me.md?plain=1)
 
 **PREDICTION PAGE**
 ![Prediction Page](Streamlit\Images\Prediction_pg.jpg)

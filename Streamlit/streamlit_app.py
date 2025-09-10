@@ -4,17 +4,17 @@ import pandas as pd
 import streamlit as st
 
 # Load Model & Preprocessing Files
-with open(r"C:\Users\spand\Projects\CAR_DHEKO\saved_pickles\final_model.pkl", "rb") as file: 
+with open("saved_pickles/final_model.pkl", "rb") as file: 
     loaded_model = pickle.load(file)
 
-with open(r"C:\Users\spand\Projects\CAR_DHEKO\saved_pickles\label_encoders.pkl", "rb") as le_file:
+with open("saved_pickles/label_encoders.pkl", "rb") as le_file:
     loaded_label_encoders = pickle.load(le_file)
 
-with open(r"C:\Users\spand\Projects\CAR_DHEKO\saved_pickles\mm_scaler.pkl", "rb") as mm_scaler_file:
+with open("saved_pickles/mm_scaler.pkl", "rb") as mm_scaler_file:
     loaded_mm_scaler = pickle.load(mm_scaler_file)
 
 # Load dataset
-df = pd.read_csv(r"C:\Users\spand\Projects\CAR_DHEKO\All_Cities_Cleaned.csv")
+df = pd.read_csv("All_Cities_Cleaned.csv")
 
 # Get min & max values dynamically
 min_kms, max_kms = df["Kms Driven"].min(), df["Kms Driven"].max()

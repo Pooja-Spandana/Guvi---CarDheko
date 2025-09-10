@@ -98,9 +98,14 @@ elif st.session_state["page"] == "Result":
 
     st.sidebar.markdown("<h2 style='text-align: center;'>THANK YOU, VISIT US AGAIN!</h2>", unsafe_allow_html=True)
 
+IMAGE_DIR = os.path.dirname(os.path.abspath(__file__))  # .../Streamlit
+IMAGE_PATH_1 = os.path.join(IMAGE_DIR, "Images", "1.jpg")
+IMAGE_PATH_2 = os.path.join(IMAGE_DIR, "Images", "2.jpg")
+IMAGE_PATH_3 = os.path.join(IMAGE_DIR, "Images", "3.jpg")
+
 # ---- Home Page ----
 if st.session_state["page"] == "Home":
-    st.image(r"C:\Users\spand\Projects\CAR_DHEKO\Streamlit\Images\1.jpg")
+    st.image(IMAGE_PATH_1)
     
 # ---- Prediction Page ----
 elif st.session_state["page"] == "Prediction":  
@@ -163,7 +168,7 @@ elif st.session_state["page"] == "Result":
 
         col1, col2, col3 = st.columns(3)
         with col1:
-            st.image(r"C:\Users\spand\Projects\CAR_DHEKO\Streamlit\Images\2.jpg", use_container_width=True)
+            st.image(IMAGE_PATH_2)
 
         with col2:
             st.markdown("<h4 style='text-align: center;'>Entered Car Details</h4>", unsafe_allow_html=True)
@@ -171,7 +176,7 @@ elif st.session_state["page"] == "Result":
                 st.markdown(f"<p style='text-align: center; font-size:18px; font-weight:bold;'>{key.replace('_', ' ').title()}: {value}</p>", unsafe_allow_html=True)
         
         with col3:
-            st.image(r"C:\Users\spand\Projects\CAR_DHEKO\Streamlit\Images\3.jpg", use_container_width=True)
+            st.image(IMAGE_PATH_3)
 
         st.markdown(f"""
             <div style='background-color:#366788; padding:15px; border-radius:10px; text-align:center; font-size:24px;'>

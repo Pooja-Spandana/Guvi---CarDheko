@@ -1,17 +1,29 @@
 # Importing libraries
+import os
 import pickle
 import pandas as pd
 import streamlit as st
 
-# Load Model & Preprocessing Files
-with open("saved_pickles/final_model.pkl", "rb") as file: 
-    loaded_model = pickle.load(file)
+# Get absolute path to repo root
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-with open("saved_pickles/label_encoders.pkl", "rb") as le_file:
-    loaded_label_encoders = pickle.load(le_file)
+# Go one level up (since streamlit_app.py is inside Streamlit/)
+ROOT_DIR = os.path.dirname(BASE_DIR)
 
-with open("saved_pickles/mm_scaler.pkl", "rb") as mm_scaler_file:
-    loaded_mm_scaler = pickle.load(mm_scaler_file)
+# Build safe paths
+MODEL_PATH = os.path.join(ROOT_DIR, "saved_pickles", "final_model.pkl")
+ENCODER_PATH = os.path.join(ROOT_DIR, "saved_pickles", "label_encoders.pkl")
+SCALER_PATH = os.path.join(ROOT_DIR, "saved_pickles", "mm_scaler.pkl")
+
+# Load pickles
+with open(MODEL_PATH, "rb") as f:
+    loaded_model = pickle.load(f)
+
+with open(ENCODER_PATH, "rb") as f:
+    loaded_label_encoders = pickle.load(f)
+
+with open(SCALER_PATH, "rb") as f:
+    loaded_mm_scaler = pickle.load(f)
 
 # Load dataset
 df = pd.read_csv("All_Cities_Cleaned.csv")
